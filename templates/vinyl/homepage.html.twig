@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Create new record-{{parent()}}
+{% endblock %}
+
+{% block body %}
+
+
+<h1>{{title}}</h1>
+{#Comentario#}
+
+
+<div>
+    Tracks:
+
+    <ul>
+        {% for track in tracks %}
+            <li>
+            {#Cunado pongo | puedo pasar filtros,que son diferentes acciones q se le pueden aplicar#}
+                {{track.artist}}-{{track.song|upper}}
+            </li>
+        {% endfor %}
+    </ul>
+
+
+
+</div>
+{% endblock %}
